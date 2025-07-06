@@ -1,15 +1,15 @@
-import { useState } from 'react'
-
 import './App.css'
-import Whiteboard from './components/Whiteboard'
+import Whiteboard from './components/Whiteboard.tsx'
+import PlayersSidebar from './components/PlayersSidebar.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Whiteboard />
-      
+      <h1 style={{ fontSize: '3rem', textAlign: 'center', margin: '32px 0 16px 0', fontWeight: 700 }}>Scribble</h1>
+      <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'flex-start' }}>
+        <PlayersSidebar />
+        <Whiteboard />
+      </div>
     </>
   )
 }

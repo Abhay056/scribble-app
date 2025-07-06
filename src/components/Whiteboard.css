@@ -1,0 +1,127 @@
+.whiteboard-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.whiteboard-main-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.whiteboard-canvas-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.whiteboard-toolbar-horizontal {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.thickness-slider-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.thickness-slider-group label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.thickness-slider-group input[type="range"] {
+  width: 100px;
+  margin: 4px 0;
+}
+
+.whiteboard-toolbar-vertical {
+  display: contents;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin-left: 12px;
+  margin-top: 8px;
+}
+
+.whiteboard-canvas {
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 2px 16px #0001;
+  border-radius: 12px;
+  cursor: alias;
+  max-width: 100vw;
+  max-height: 65vh;
+  width: 1000px;
+  height: auto;
+  display: block;
+}
+
+.whiteboard-canvas.eraser-cursor {
+  cursor: cell;
+}
+
+.whiteboard-palette {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.palette-color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.palette-color.selected {
+  border: 3px solid #333;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+}
+
+@media (max-width: 1100px) {
+  .whiteboard-canvas {
+    width: 90vw;
+    max-width: 98vw;
+  }
+  .whiteboard-toolbar-horizontal {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .whiteboard-main-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .whiteboard-toolbar-vertical {
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 8px;
+    gap: 8px;
+  }
+} 

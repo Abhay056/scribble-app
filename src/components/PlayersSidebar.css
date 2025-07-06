@@ -1,0 +1,51 @@
+.players-sidebar {
+  width: 200px;
+  min-width: 160px;
+  max-width: 240px;
+  background: #f5f5fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 24px 16px 16px 16px;
+  margin-right: 32px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: fit-content;
+}
+
+.players-sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.players-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.1rem;
+}
+
+.player-row:last-child {
+  border-bottom: none;
+}
+
+.player-name {
+  font-weight: 500;
+  color: #444;
+}
+
+.player-score {
+  font-weight: 700;
+  color: #2ecc71;
+} 
